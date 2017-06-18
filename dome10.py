@@ -24,8 +24,8 @@ class Weiboceshi(unittest.TestCase):
         self.driver.find_element_by_id('camera_switch').click()
         sleep(3)
         self.driver.find_element_by_id('camera_bottom_middle').click()
-        a=self.driver.find_elements_by_xpath(xpath="//android.widget.ImageView")
-        a[3].click()#取不到想要的下标
+        a=self.driver.find_elements_by_class_name('android.widget.ImageView')
+        a[3].click()
         self.driver.find_element_by_name('下一步').click()
         self.driver.find_element_by_id('edit_view').send_keys('kuaile')
         self.driver.find_element_by_name('发送').click()
